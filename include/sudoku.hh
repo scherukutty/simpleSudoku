@@ -10,15 +10,18 @@ using std ::array, std::set;
 class Sudoku {
 private:
   array<array<short, MAT_SIZE>, MAT_SIZE> matrix;
-  array<set<short>, TOTAL_ENTRIES> possibilities;
+  array<array<set<short>, MAT_SIZE>, MAT_SIZE> possibilities;
 
 public:
-  int solve();
-  int fetchMatrix();
-  int printMatrix();
+  void fetchMatrix();
+  void printMatrix();
+  void printPossibilities();
   set<short> fetchHorizontal(short row);
   set<short> fetchVertical(short column);
   set<short> fetchSquare(short row, short column);
-  int updatePossibilities();
+  set<short> getProbables(short row, short column);
+  bool updatePossibilities();
+  bool isSolved();
+  bool solve();
 };
 #endif // !SUDOKU_HH
