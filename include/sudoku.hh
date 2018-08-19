@@ -3,23 +3,30 @@
 #include <array>
 #include <iostream>
 #include <set>
-#define MAT_SIZE 9
-#define TOTAL_ENTRIES (MAT_SIZE * MAT_SIZE)
+#define MATRIX_SIZE 9
+#define SECTION_SIZE 3
 using std ::array, std::set;
 
 class Sudoku {
 private:
-  array<array<short, MAT_SIZE>, MAT_SIZE> matrix;
-  array<array<set<short>, MAT_SIZE>, MAT_SIZE> possibilities;
+  array<array<short, MATRIX_SIZE>, MATRIX_SIZE> matrix;
+  array<array<set<short>, MATRIX_SIZE>, MATRIX_SIZE> possibilities;
 
 public:
-  void fetchMatrix();
+  // IO
+  void printSet(set<short> inputSet);
   void printMatrix();
   void printPossibilities();
+  void fetchMatrix();
+
+  // Processing
   set<short> fetchHorizontal(short row);
   set<short> fetchVertical(short column);
-  set<short> fetchSquare(short row, short column);
+  set<short> fetchSection(short row, short column);
+  set<short> getDiff(set<short> set1, set<short> set2);
   set<short> getProbables(short row, short column);
+  set<short> narrowProbables(short row, short column);
+  void loadPossibilities();
   bool updatePossibilities();
   bool isSolved();
   bool solve();
