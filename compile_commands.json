@@ -1,7 +1,7 @@
 [
 {
-  "directory": "/home/local/ZOHOCORP/samuel-4451/Workspace/GitProjects/simpleSudoku/build",
-  "command": "/usr/bin/clang++-6.0    -I/home/local/ZOHOCORP/samuel-4451/Workspace/GitProjects/simpleSudoku/include  -g   -std=c++14 -o CMakeFiles/sudoku.dir/src/sudoku.cc.o -c /home/local/ZOHOCORP/samuel-4451/Workspace/GitProjects/simpleSudoku/src/sudoku.cc",
-  "file": "/home/local/ZOHOCORP/samuel-4451/Workspace/GitProjects/simpleSudoku/src/sudoku.cc"
+  "directory": "/home/samuel/Workspace/git/simpleSudoku/build",
+  "command": "/usr/bin/c++   -I/home/samuel/Workspace/git/simpleSudoku/include    -std=c++14 -o CMakeFiles/sudoku.dir/src/sudoku.cc.o -c /home/samuel/Workspace/git/simpleSudoku/src/sudoku.cc",
+  "file": "/home/samuel/Workspace/git/simpleSudoku/src/sudoku.cc"
 }
 ]
