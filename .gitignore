@@ -32,6 +32,6 @@
 *.app
 .vscode/
 build/
-.compile_commands.json
+compile_commands.json
 *.prob
 *.solv
